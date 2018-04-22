@@ -1,0 +1,34 @@
+{
+  "name": "emergeoFinal",
+  "version": "0.1.0",
+  "private": true,
+  "devDependencies": {
+    "babel-preset-react-native-stage-0": "^1.0.1",
+    "jest-react-native": "^18.0.0",
+    "react-test-renderer": "16.2.0"
+  },
+  "scripts": {
+    "start": "react-native start",
+    "android": "react-native run-android",
+    "ios": "react-native run-ios",
+    "test": "node node_modules/jest/bin/jest.js"
+  },
+  "jest": {
+    "preset": "react-native"
+  },
+  "dependencies": {
+    "firebase": "^4.12.0",
+    "native-base": "^2.4.1",
+    "react": "16.2.0",
+    "react-native": "0.52.0",
+    "react-native-form-generator": "^0.9.9",
+    "react-native-gifted-chat": "^0.4.3",
+    "react-native-linear-gradient": "^2.4.0",
+    "react-navigation": "^1.5.8",
+    "react-redux": "^5.0.7",
+    "react-native-simple-radio-button": "^2.7.1",
+    "redux": "^3.7.2",
+    "redux-thunk": "^2.2.0",
+    "tcomb-form-native": "^0.6.11"
+  }
+}
