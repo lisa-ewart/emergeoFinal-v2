@@ -1,5 +1,9 @@
 [
     {
+        "merged": "C:\\Users\\rhill\\Desktop\\emergeoFinal-v2\\android\\app\\build\\intermediates\\res\\merged\\debug\\mipmap-mdpi\\ic_launcher.png",
+        "source": "C:\\Users\\rhill\\Desktop\\emergeoFinal-v2\\android\\app\\src\\main\\res\\mipmap-mdpi\\ic_launcher.png"
+    },
+    {
         "merged": "C:\\Users\\rhill\\Desktop\\emergeoFinal\\android\\app\\build\\intermediates\\res\\merged\\debug\\mipmap-mdpi\\ic_launcher.png",
         "source": "C:\\Users\\rhill\\Desktop\\emergeoFinal\\android\\app\\src\\main\\res\\mipmap-mdpi\\ic_launcher.png"
     }

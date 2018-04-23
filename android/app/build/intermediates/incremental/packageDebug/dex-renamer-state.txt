@@ -1,4 +1,4 @@
-#Thu Apr 12 17:35:08 EDT 2018
-base.0=C\:\\Users\\rhill\\Desktop\\emergeoFinal\\android\\app\\build\\intermediates\\transforms\\dex\\debug\\folders\\1000\\1f\\main
+#Sun Apr 22 18:15:29 EDT 2018
+base.0=C\:\\Users\\rhill\\Desktop\\emergeoFinal-v2\\android\\app\\build\\intermediates\\transforms\\dex\\debug\\folders\\1000\\1f\\main
 renamed.0=classes.dex
-file.0=C\:\\Users\\rhill\\Desktop\\emergeoFinal\\android\\app\\build\\intermediates\\transforms\\dex\\debug\\folders\\1000\\1f\\main\\classes.dex
+file.0=C\:\\Users\\rhill\\Desktop\\emergeoFinal-v2\\android\\app\\build\\intermediates\\transforms\\dex\\debug\\folders\\1000\\1f\\main\\classes.dex
