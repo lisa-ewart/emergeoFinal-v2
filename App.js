@@ -30,7 +30,10 @@ import MyProfile from './src/components/ProfileHome';
 
 const Emergeo = StackNavigator({
   Home: {screen: StartScreen},
-  Message: {screen: Chat}
+  Message: {screen: Chat},
+  Create: {screen: CreateProfile},
+  Profile: {screen: MyProfile},
+  Services: {screen: Services},
 });
 
 
@@ -76,7 +79,7 @@ _requestLocation = async () =>{
       
       <Provider store={store}>
         <View style={styles.container}>
-          <MyProfile screenProps={{loggedIn, currentUser}}/>
+          <StartScreen screenProps={{loggedIn, currentUser}}/>
         </View>
       </Provider>
 

@@ -1,8 +1,7 @@
 
-//change button (service) to question with check boxes
 //add new screen with services to select
-//change select username to enter first name and last name
-//remove mini bio and photo select from create profile 
+//add navigation screens
+
 
 
 
@@ -33,6 +32,9 @@ const radioData = [
  
 
 class CreateProfile extends Component{
+
+  
+
     render(){  
         return(
         	<Container style={styles.containerStyle} >
@@ -47,7 +49,6 @@ class CreateProfile extends Component{
             </View>
 	          <View style={styles.cardStyle}>
 	          	<TextInput style={styles.inputStyle} placeholder="choose a username (required)"></TextInput>
-	          	<TextInput  multiline={true} maxLength={150} style={styles.inputStyleBio} placeholder="minibio (max 150 chars)"></TextInput>
 	          </View>
 
             <View>
@@ -59,6 +60,7 @@ class CreateProfile extends Component{
           style={{ width: 350 - 220 }}
               outerColor='green'
               innerColor='orange'
+              textColor='grey'
               dataSource={radioData}
               itemShowKey="label"
               itemRealKey="value"
@@ -88,7 +90,6 @@ class CreateProfile extends Component{
             <Button>
               <Icon name="search" />
             </Button>
-            {/*<Button active>*/}
             <Button>
               <Icon active name="mail" />
             </Button>
@@ -149,21 +150,6 @@ const styles = {
     borderRadius: 5,
     color: '#5d6d7e',
   },
-  inputStyleBio: {
-    padding:10,
-    margin:10,
-    textAlign: 'center',
-    backgroundColor: 'white',
-    width:250,
-    height:120,
-    borderRadius: 5,
-    color: '#5d6d7e',
-  },
- 
-  cameraButton: {
-  	backgroundColor:'white',
-  	padding: 10
-  },
   serviceButton:{
   	backgroundColor: 'orange',
   	color: '#ffffff',
@@ -173,7 +159,6 @@ const styles = {
   },
   submitButton:{
     backgroundColor: 'orange',
-    color: '#ffffff',
     padding: 5,
     borderRadius: 4,
     marginTop:15,
