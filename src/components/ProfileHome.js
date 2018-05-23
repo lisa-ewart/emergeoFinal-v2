@@ -20,7 +20,8 @@ import { StyleSheet,
       Image,
       Modal,
 	    } from 'react-native';
-import { Container, Header, Content, Card, CardItem, Thumbnail, FooterTab, Footer, Text, Button, Icon, Left, Body, Right } from 'native-base';
+import { Container, Header, Content, Card, CardItem, Icon, Ionicon, Thumbnail, FooterTab, Footer, Text, Button,  Left, Body, Right } from 'native-base';
+
 
 
 
@@ -38,23 +39,27 @@ state = {
     return ( 
       <Container style={styles.containerStyle}>
       <StatusBar hidden={true} />
-        <Header />
+       
         <Content>
           <Card style={styles.cardStyle}>
             <CardItem>
               <Left>
                   <Thumbnail source={{uri: 'https://encrypted-tbn0.gstatic.com/images?q=tbn:ANd9GcTOOzYELSp-WXLev_yXSO05oonmSy6Qz73IY3nWgvBq4Geg_g-3'}} />
                  <Body>
-                  <Text style={styles.textStyle2}>UserNameHere</Text>
+                  <Text style={styles.textStyle2}>UserName1</Text>
                   <Text note>Electrician, Plumber</Text>
+                  <Icon name="medal" style={{color: "gold"}}/>
                 </Body>
               </Left>
+              <Right>
+                <Button style={styles.contactsButton}><Icon style={{marginRight:-10}} name="add"/><Icon name="contact" style={{paddingRight:-20}}
+                  onPress={()=> {
+                 alert('Add username to your contacts?');
+                }}
+                /></Button>
+              </Right>
             </CardItem>
-            <CardItem cardBody>
-             <Image source={{uri: 'https://encrypted-tbn0.gstatic.com/images?q=tbn:ANd9GcTOOzYELSp-WXLev_yXSO05oonmSy6Qz73IY3nWgvBq4Geg_g-3'}} style={{height: 200, width: null, flex: 1}}/>
-
-
-            </CardItem>
+           
             <CardItem>
               <Left>
                 <Button transparent>
@@ -69,13 +74,6 @@ state = {
                   <Icon active name="chatbubbles" style={styles.iconButtons}/>
                   <Text style={styles.iconButtons}>Reviews</Text>
                 </Button>
-
-
-
-
-
-
-
               </Body>
               <Right>
                 <Text style={styles.onlineText}>online!</Text>
@@ -89,7 +87,12 @@ state = {
             </CardItem>
 			<CardItem>
 				<Text style={styles.bioBox}>Welcome to Comprehensive Contractors; Your one-stop resource for full-service plumbing and electrical solutions in NJ and NY, serving areas in Bergen, Rockland, and Passaic Counties.</Text>
-			</CardItem>
+      </CardItem>
+
+<CardItem>
+        <Text style={styles.bioBox}>Serving areas in Bergen, Rockland, and Passaic Counties.</Text>
+      </CardItem>
+
 			<CardItem footer>
 				<TouchableOpacity style={styles.messageButton} onPress={()=> uploadImage() }>
 				<Text style={styles.textStyle}>Message Me</Text>
@@ -106,7 +109,7 @@ state = {
           onRequestClose={() => {
             alert('Modal has been closed.');
           }}>
-          <View style={{margin: 20, width:370, height:'auto', backgroundColor: 'rgba(0,0,0,.4)', flexDirection: 'column', flex:1}}>
+          <View style={{margin: 10, width:355, height:'auto',padding:12, backgroundColor: 'rgba(0,0,0,.4)', flexDirection: 'column', flex:1}}>
             <View style={styles.modalBox}>
               <TouchableHighlight
                 onPress={() => {
@@ -117,20 +120,15 @@ state = {
                 
               </TouchableHighlight>
             </View>
-            <View style={{marginLeft:20}}>
+            <View style={{marginLeft:10}}>
             <Thumbnail style={{marginBottom:20}} source={{uri: 'https://encrypted-tbn0.gstatic.com/images?q=tbn:ANd9GcTOOzYELSp-WXLev_yXSO05oonmSy6Qz73IY3nWgvBq4Geg_g-3'}} />
           	<Text style={{color:'white', fontWeight: 'bold', paddingTop:10}}>UserNameHere</Text>
             <ScrollView>
            
-          	<Text style={{color:'white', marginTop:20}}>-The guy was alright.  He was a bit weird, but knew what he was talking about and did a clean professional job.</Text>
-          	<Text style={{color:'white', marginTop:20}}>-Do NOT use UserNameHere!!!  I repeat:  Do NOT use UserNameHere!!! He charged me way more than what I paid last time for same work.  I think he might be a second cousin.  Looked strangely familiar.</Text>
-          	<Text style={{color:'white',marginTop:20}}>-UserNameHere was great.  He arrived on time and finished early.  Nice work.</Text>
-          	<Text style={{color:'white',marginTop:20}}>-He showed up within minutes and finished installing all or our light fixtures within 2 hours.  Will call him again.</Text>
- 
-            <Text style={{color:'white', marginTop:20}}>-The guy was alright.  He was a bit weird, but knew what he was talking about and did a clean professional job.</Text>
-          	<Text style={{color:'white', marginTop:20}}>-Do NOT use UserNameHere!!!  I repeat:  Do NOT use UserNameHere!!! He charged me way more than what I paid last time for same work.  I think he might be a second cousin.  Looked strangely familiar.</Text>
-          	<Text style={{color:'white',marginTop:20}}>-UserNameHere was great.  He arrived on time and finished early.  Nice work.</Text>
-          	<Text style={{color:'white',marginTop:20}}>-He showed up within minutes and finished installing all or our light fixtures within 2 hours.  Will call him again.</Text>
+          	<Text style={{color:'white', marginTop:20, textAlign:'justify',}}>-The guy was alright.  He was a bit weird, but knew what he was talking about and did a clean professional job.</Text>
+          	<Text style={{color:'white', marginTop:20, textAlign:'justify',}}>-Do NOT use UserNameHere!!!  I repeat:  Do NOT use UserNameHere!!! He charged me way more than what I paid last time for same work.  I think he might be a second cousin.  Looked strangely familiar.</Text>
+          	<Text style={{color:'white',marginTop:20, textAlign:'justify',}}>-UserNameHere was great.  He arrived on time and finished early.  Nice work.</Text>
+          	<Text style={{color:'white',marginTop:20, textAlign:'justify',}}>-He showed up within minutes and finished installing all or our light fixtures within 2 hours.  Will call him again.</Text>
  
           </ScrollView>
           </View>
@@ -183,12 +181,10 @@ const styles = {
 		elevation: 1,
 		marginLeft: 5,
 		marginRight: 5,
-		marginTop: 10,
-		color: '#5d6d7e'
+		marginTop: 40,	
 	},
 	modalBox:{
-		margin:40,
-		
+		margin:40,		
 	},
 
 	textStyle: {
@@ -225,16 +221,23 @@ const styles = {
 	},
 
 	iconButtons:{
-		color: '#F76C6C',
-    
+		color: '#F76C6C',  
 	},
 	
   
   messageButton:{
   	backgroundColor: '#464866',
-  	color: '#ffffff',
   	padding: 5,
   	borderRadius: 4,
   	marginTop:15
+  },
+  contactsButton:{
+    height:40,
+    backgroundColor: '#464866',
+    // color: '#ffffff',
+    padding: 0,
+    borderRadius: 4,
+    width:65,
+    marginTop:15
   }
 }

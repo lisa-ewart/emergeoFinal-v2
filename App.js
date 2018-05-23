@@ -24,6 +24,9 @@ import rootReducers from './src/reducers';
 
 import StartScreen from './src/components/StartScreen';
 import Chat from './src/components/Chat';
+import CreateProfile from './src/components/CreateProfile';
+import Services from './src/components/Services';
+import MyProfile from './src/components/ProfileHome';
 
 const Emergeo = StackNavigator({
   Home: {screen: StartScreen},
@@ -61,10 +64,6 @@ _requestLocation = async () =>{
   }
 }
 
-
-
-
-
   render() {
     const createStoreWithMiddleware = applyMiddleware(thunk)(createStore);
     const store = createStoreWithMiddleware(rootReducers);
@@ -77,7 +76,7 @@ _requestLocation = async () =>{
       
       <Provider store={store}>
         <View style={styles.container}>
-          <Chat screenProps={{loggedIn, currentUser}}/>
+          <MyProfile screenProps={{loggedIn, currentUser}}/>
         </View>
       </Provider>
 

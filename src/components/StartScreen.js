@@ -44,7 +44,7 @@ componentWillMount(){
 	        	</View>
 
 	        	<View >
-	        		<Image style={styles.imageStyle} source={require('../../emergeologo.png')} />
+	        		<Image style={styles.imageStyle} source={require('../../logo.png')} />
 	        	</View>
 
 	        	<View >
